@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Webpage</title>
+        <script src="document.js" defer></script>
+        <script>
+            document.getElementById("submit").onmouseover = function() {mouseOver()};
+            document.getElementById("submit").onmouseout = function() {mouseOut()};
+            
+            function mouseOver() {
+              document.getElementById("submit").style.color = "darkred";
+            }
+            
+            function mouseOut() {
+              document.getElementById("submit").style.color = "black";
+            }
+            </script>
+    </head>
+    <body>
+        
+        <h2>Products</h2>
+        <div id="data" onclick="changeColor()">
+        <button id="data" onclick="displayInfo()">Get Data</button>
+        </div>
+        <br>
+        <br>
+
+    <div>
+        <form id="myForm" onsubmit="handleSubmit(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Input Full Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Input your Email" required><br>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="4" cols="40" required>Message</textarea>
+            <div onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
